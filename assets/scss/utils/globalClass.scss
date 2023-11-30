@@ -15,6 +15,23 @@
   }
 }
 
+.logo {
+  color: var(--white);
+  font-weight: 700;
+  font-size: 1.3rem;
+  line-height: 120%;
+
+  &::after {
+    content: '';
+    background-color: var(--yellow-1);
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 0.5rem;
+  }
+}
+
 .back-gray__light {
   background-color: var(--back);
 }

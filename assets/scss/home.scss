@@ -179,5 +179,25 @@
   }
 
   // GIM
-  &-gim {}
+  &-gim {
+    &-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(530px, 1fr));
+      gap: 1.25rem;
+
+      &_item {
+        background-color: var(--yellow-1);
+        border-radius: var(--border-r);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 1rem;
+        padding: 2.8rem 1.8rem;
+      }
+
+      &_image {
+        align-items: end;
+      }
+    }
+  }
 }

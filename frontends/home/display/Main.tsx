@@ -6,6 +6,7 @@ import Exchange from "./Exchange"
 import Profitably from "./Profitably"
 import Info from "./Info"
 import Faq from "./Faq"
+import Gim from "./Gim"
 
 export default function () {
   return (
@@ -16,6 +17,7 @@ export default function () {
       <Exchange />
       <Profitably />
       <Info />
+      <Gim />
       <Faq />
     </div>
   )

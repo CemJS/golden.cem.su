@@ -11,7 +11,7 @@ export default function () {
             return (
               <div class="home-gim-content_item">
                 <div class="home-gim-content_info">
-                  <h3 class="home-gim-content_title">{item.title}</h3>
+                  <h3 class="home-gim-content_title font-medium">{item.title}</h3>
                   <p class="home-gim-content_desc">{item.desc}</p>
                 </div>
                 <div class="home-gim-content_image">
