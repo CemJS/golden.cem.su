@@ -11,15 +11,14 @@ front.func.test = () => {
 }
 
 front.loader = () => {
-    Static.text = "Framework CemJS!";
     return
 }
 
 front.display = () => {
     return (
-        <div>
+        <main class="main back-gray__light">
             <Navigation />
-        </div>
+        </main>
     )
 }
 

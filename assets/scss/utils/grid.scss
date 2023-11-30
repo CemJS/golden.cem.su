@@ -1,0 +1,5 @@
+.col-65-35 {
+  display: grid;
+  grid-template-columns: 60% 35%;
+  gap: clamp(1rem, 3.5vw, 3rem);
+}

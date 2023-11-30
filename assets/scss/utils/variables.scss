@@ -1,9 +1,25 @@
-//colors
-$white: #ffffff;
-$akebi_purple: #9844b7;
-$noble_black: #1D2029;
-$summer_sky: #3bade3;
-$blue_oyster_cult: #576fe6;
-$lilac_lotion: #ff357f;
-$glass: rgba(150, 150, 150, 0.2);
-$border: rgba(150, 150, 150, 0.5);
+:root {
+  --yellow-1: #F7BE00;
+  --yellow-2: #e7b40c;
+  --yellow-3: #ffc400;
+  --yellow-dark: #E6A000;
+  --black: #000000;
+  --light-text: #F5F5F5;
+  --white: #FFFFFF;
+  --back: #F0EEEE;
+  --gray: #E4E1E1;
+  --gray-dark: #D6D4D4;
+
+
+
+  // utils
+  --section-title: 2.8rem;
+  --lh: 120%;
+  --border-r: 1.25rem;
+
+  // transition
+  --tran-03: all .3s ease-in-out;
+  --tran-05: all .5s ease-in-out;
+  --tran-015: all .15s ease-in-out;
+
+}

@@ -1,0 +1,26 @@
+[
+  {
+    "icon": "/contents/advantages/chart.svg",
+    "text": "Стабильные вложения"
+  },
+  {
+    "icon": "/contents/advantages/verified.svg",
+    "text": "Безопасность"
+  },
+  {
+    "icon": "/contents/advantages/replace.svg",
+    "text": "Быстрый обмен"
+  },
+  {
+    "icon": "/contents/advantages/secure.svg",
+    "text": "Удобство и простота в управлении активами"
+  },
+  {
+    "icon": "/contents/advantages/chartBar.svg",
+    "text": "Прозрачность"
+  },
+  {
+    "icon": "/contents/advantages/discs.svg",
+    "text": "Токенизация золота"
+  }
+]

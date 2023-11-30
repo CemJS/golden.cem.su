@@ -1,0 +1,36 @@
+.text {
+  &-align {
+    &__center {
+      text-align: center;
+    }
+
+    &__left {
+      text-align: left;
+    }
+
+    &__right {
+      text-align: right;
+    }
+  }
+
+  &-light {
+    color: var(--white);
+  }
+}
+
+.font {
+  &-bold {
+    font-weight: 700;
+    font-family: 'Roboto-Bold';
+  }
+
+  &-medium {
+    font-weight: 500;
+    font-family: 'Roboto-Medium';
+  }
+
+  &-regular {
+    font-weight: 400;
+    font-family: 'Roboto-Regular';
+  }
+}

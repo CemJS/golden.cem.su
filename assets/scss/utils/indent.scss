@@ -1,0 +1,66 @@
+$indents: (
+  0: 0rem,
+  1: 1.125rem,
+  2: 2rem,
+  3: 3rem,
+  4: 4rem,
+  5: 5rem,
+);
+
+// padding, margin
+@each $index,
+$indent in $indents {
+  .pt-#{$index} {
+    padding-top: $indent;
+  }
+
+  .pb-#{$index} {
+    padding-bottom: $indent;
+  }
+
+  .pl-#{$index} {
+    padding-left: $indent;
+  }
+
+  .pr-#{$index} {
+    padding-right: $indent;
+  }
+
+  .px-#{$index} {
+    padding: 0 $indent;
+  }
+
+  .py-#{$index} {
+    padding: $indent 0;
+  }
+
+  .mt-#{$index} {
+    margin-top: $indent;
+  }
+
+  .mb-#{$index} {
+    margin-bottom: $indent;
+  }
+
+  .ml-#{$index} {
+    margin-left: $indent;
+  }
+
+  .mr-#{$index} {
+    margin-right: $indent;
+  }
+
+  .mx-#{$index} {
+    margin: 0 $indent;
+  }
+
+  .my-#{$index} {
+    margin: $indent 0;
+  }
+
+  .fz-#{$index} {
+    font-size: $indent;
+  }
+}
+
+// padding, margin
