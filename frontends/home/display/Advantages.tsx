@@ -5,7 +5,7 @@ import advantages from '@json/advantages'
 export default function () {
   return (
     <section class="home-advantages pb-5">
-      <h2 class="section-title text-align__center font-medium py-3">Почему выгодно приобретать GIM</h2>
+      <h2 class="section-title text-align-center font-medium py-3">Почему выгодно приобретать GIM</h2>
 
       <div class="home-advantages-slider-wrap">
         <div class="wrapper">

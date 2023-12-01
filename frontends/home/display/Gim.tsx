@@ -4,7 +4,7 @@ import gim from '@json/gim'
 export default function () {
   return (
     <section class="home-gim pb-5 wrapper">
-      <h2 class="section-title text-align__left">Золотой пай</h2>
+      <h2 class="section-title text-align-left">Преимущества цифрового золота GIM</h2>
       <div class="home-gim-content">
         {
           gim.map(item => {

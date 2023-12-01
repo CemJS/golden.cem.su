@@ -1,13 +1,61 @@
 .home {
 
+  // PRESA
+  &-presa {
+    background-image: url('images/mainBack.jpg');
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-size: cover;
+    padding: clamp(1.8rem, 3.5vw, 3rem) 0;
+    position: relative;
+    border: 1px solid var(--black);
+    color: var(--light-text);
+
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(59, 57, 57, 0.7);
+    }
+
+    &-inner {
+      max-width: 42rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    &-info {
+      padding: clamp(1rem, 3.5vw, 2rem) 0;
+      font-size: clamp(1rem, 2.5vw, 1.2rem);
+      line-height: var(--lh);
+
+      &>p {
+        padding-bottom: clamp(0.8rem, 3.5vw, 1.2rem);
+      }
+    }
+
+    @media(max-width: 464px) {
+      background-position: -12rem center;
+
+      &::before {
+        background: rgba(59, 57, 57, 0.8);
+      }
+    }
+
+  }
+
   // ADVANTAGES
   &-advantages {
-
     &-slider {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
-      gap: 4rem;
+      grid-template-columns: repeat(3, 1fr);
+      gap: clamp(1rem, 3vw, 4rem);
       max-width: 80%;
+      // padding: 0 6rem;
       margin: 0 auto;
 
       &-wrap {
@@ -58,13 +106,18 @@
         align-items: center;
         top: 50%;
         transform: translateY(-50%);
+        cursor: pointer;
+        transition: var(--tran-03);
+
+        span {
+          width: 15px;
+          height: 15px;
+        }
 
         &__left {
           left: 0;
 
           span {
-            width: 15px;
-            height: 15px;
             border-left: 3px solid var(--black);
             border-top: 3px solid var(--black);
             transform: rotate(-45deg);
@@ -75,31 +128,53 @@
           right: 0;
 
           span {
-            width: 15px;
-            height: 15px;
             border-right: 3px solid var(--black);
             border-top: 3px solid var(--black);
             transform: rotate(45deg);
           }
         }
+
+        &:hover {
+          background-color: var(--yellow-2);
+        }
+
+        &:active {
+          background-color: var(--yellow-3);
+          transform: translateY(-50%) scale(0.96);
+        }
       }
 
     }
-
-
   }
 
   // ABOUT
   &-about {
     border-radius: var(--border-r);
     background-color: var(--gray);
-    padding: 2.5rem 3.125rem;
+    padding: clamp(1rem, 3.5vw, 2.5rem) clamp(1rem, 3.5vw, 3.125rem);
 
     &-info {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
     }
+
+    &-image {
+      img {
+        width: 75%;
+      }
+    }
+
+    @media screen and (max-width: 1200px) {
+      margin: 0 1.5rem;
+    }
+
+    @media screen and (max-width: 850px) {
+      &-image {
+        display: none;
+      }
+    }
+
   }
 
   // MARKETPLACE
@@ -120,6 +195,29 @@
         z-index: -1;
       }
     }
+
+    @media(max-width: 850px) {
+      .home-about-info {
+        order: 2;
+      }
+
+      &-image {
+        order: 1;
+        margin: 0 auto;
+        padding: 0 clamp(2rem, 3.5vw, 4rem);
+
+      }
+    }
+
+    @media(max-width: 464px) {
+      &-image {
+        padding: 0;
+
+        img {
+          width: 60%;
+        }
+      }
+    }
   }
 
   // EXCHANGE
@@ -135,6 +233,63 @@
       height: 100%;
       background-color: var(--yellow-1);
     }
+
+    &-info {
+      max-width: 450px;
+    }
+
+    &-content {
+      position: relative;
+      z-index: 2;
+      display: flex;
+
+      &_item {
+        position: relative;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+
+        &-r {
+          .home-exchange-info {
+            align-self: end;
+          }
+        }
+
+        &-l {
+          .home-exchange-info {
+            align-self: start;
+          }
+        }
+      }
+    }
+
+    &-title {
+      padding: 5rem 0;
+      position: relative;
+      font-size: clamp(1.5rem, 3.5vw, 2rem);
+
+
+      &__yellow {
+        &::before {
+          content: url('svg/arrowYellow.svg');
+          top: 0;
+          position: absolute;
+          right: -0.8rem;
+        }
+      }
+
+      &__black {
+        &::before {
+          content: url('svg/arrowBlack.svg');
+          top: 0;
+          position: absolute;
+          left: -0.8rem;
+        }
+      }
+
+    }
+
   }
 
   // PROFITABLY
@@ -196,7 +351,7 @@
       }
 
       &_image {
-        align-items: end;
+        align-self: end;
       }
     }
   }

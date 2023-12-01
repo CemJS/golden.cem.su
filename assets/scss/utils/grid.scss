@@ -1,5 +1,47 @@
+$indents: (
+  0: 0rem,
+  1: 1.125rem,
+  2: 2rem,
+  3: 3rem,
+  4: 4rem,
+  5: 5rem,
+);
+
+// gap
+@each $index,
+$indent in $indents {
+  .gap-#{$index} {
+    padding-top: $indent;
+  }
+
+  .row-gap-#{$index} {
+    row-gap: $indent;
+  }
+
+  .column-gap-#{$index} {
+    column-gap: $indent;
+  }
+}
+
+// gap
+
 .col-65-35 {
   display: grid;
   grid-template-columns: 60% 35%;
-  gap: clamp(1rem, 3.5vw, 3rem);
+  gap: 3rem;
+
+  @media(max-width: 850px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.col-40-60 {
+  display: grid;
+  grid-template-columns: 35% 60%;
+  gap: 3rem;
+}
+
+.col-equal-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }

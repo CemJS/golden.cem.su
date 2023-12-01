@@ -4,6 +4,8 @@
   --yellow-3: #ffc400;
   --yellow-dark: #E6A000;
   --black: #000000;
+  --black-hover: #221f1f;
+  --black-active: #000000;
   --light-text: #F5F5F5;
   --white: #FFFFFF;
   --back: #F0EEEE;
@@ -13,7 +15,7 @@
 
 
   // utils
-  --section-title: 2.8rem;
+  --section-title: clamp(1.75rem, 3.5vw, 2.8rem);
   --lh: 120%;
   --border-r: 1.25rem;
 

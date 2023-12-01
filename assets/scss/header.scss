@@ -1,0 +1,36 @@
+.header {
+  background-color: var(--black);
+
+  &-inner {
+    padding: 1.2rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &-nav {
+    display: flex;
+    align-items: center;
+    gap: clamp(1rem, 3vw, 3rem);
+
+    &-list {
+      display: flex;
+      align-items: center;
+      gap: clamp(1rem, 3vw, 3rem);
+
+      &_item {
+        color: var(--white);
+      }
+    }
+  }
+}
+
+.header {
+  @media(max-width: 815px) {
+    &-nav {
+      &-list {
+        display: none;
+      }
+    }
+  }
+}

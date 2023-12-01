@@ -1,20 +1,28 @@
 .text {
   &-align {
-    &__center {
+    &-center {
       text-align: center;
     }
 
-    &__left {
+    &-left {
       text-align: left;
     }
 
-    &__right {
+    &-right {
       text-align: right;
+    }
+
+    &-justify {
+      text-align: justify;
     }
   }
 
   &-light {
-    color: var(--white);
+    color: var(--light-text);
+  }
+
+  &-yellow {
+    color: var(--yellow-1);
   }
 }
 

@@ -4,7 +4,7 @@ import chart from '@svg/grafik.svg'
 export default function () {
   return (
     <section class="home-about pb-5 wrapper">
-      <h2 class="section-title text-align__left">Золотой пай</h2>
+      <h2 class="section-title text-align-left">Золотой пай</h2>
       <div class="col-65-35 pt-2">
         <div class="home-about-info">
           <div>
@@ -13,11 +13,11 @@ export default function () {
             <p class="font-regular fz-1 pt-1">Платформы Золотой пай даёт возможность владения и торговли золотом в цифровой форме. Пользователи могут приобретать физическое золото и затем преобразовывать его в цифровой токен Gim, который представляет определенное количество золота. Этот токен может быть легко передан и торгуется на платформе.</p>
           </div>
 
-          <a href="/about" class="btn btn__yellow">
+          <a href="/about" class="btn btn__yellow mt-1">
             Узнать больше
           </a>
         </div>
-        <div class="f-xy-center">
+        <div class="f-xy-center home-about-image">
           <img src={chart} alt="Платформа Золотой пай" />
         </div>
       </div>
