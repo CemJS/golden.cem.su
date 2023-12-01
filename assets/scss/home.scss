@@ -265,7 +265,7 @@
     }
 
     &-title {
-      padding: 5rem 0;
+      padding: 4rem 0;
       position: relative;
       font-size: clamp(1.5rem, 3.5vw, 2rem);
 
@@ -273,7 +273,7 @@
       &__yellow {
         &::before {
           content: url('svg/arrowYellow.svg');
-          top: 0;
+          top: -1.1rem;
           position: absolute;
           right: -0.8rem;
         }
@@ -282,12 +282,51 @@
       &__black {
         &::before {
           content: url('svg/arrowBlack.svg');
-          top: 0;
+          top: -1.2rem;
           position: absolute;
           left: -0.8rem;
         }
       }
 
+    }
+
+    @media(max-width: 1150px) {
+      &::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        left: 0;
+        bottom: 0;
+        height: 50%;
+        background-color: var(--yellow-1);
+      }
+
+      &-content {
+        flex-direction: column;
+        gap: 5rem;
+      }
+
+      &_item {
+        &-r {
+          .home-exchange-title {
+            order: 1;
+          }
+
+          .home-exchange-info {
+            order: 2;
+          }
+        }
+      }
+
+      &-title {
+        &__yellow {
+          &::before {}
+        }
+
+        &__black {
+          &::before {}
+        }
+      }
     }
 
   }
