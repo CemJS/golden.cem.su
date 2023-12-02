@@ -18,7 +18,7 @@ export default function () {
       <About />
       <Marketplace />
       <Exchange />
-      {/* <Token /> */}
+      <Token />
       {/* <Profitably /> */}
       {/* <Info /> */}
       {/* <Gim /> */}

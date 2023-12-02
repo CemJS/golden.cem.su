@@ -23,7 +23,7 @@
 // text
 
 .text {
-  font-size: clamp(1rem, 3.5vw, 1.125rem);
+  font-size: var(--text-default);
 }
 
 // -------elements
