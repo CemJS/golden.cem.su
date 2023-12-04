@@ -1,4 +1,4 @@
-import { Cemjsx, Static } from "cemjs-all"
+import { Cemjsx, Static, Fn } from "cemjs-all"
 import coin1 from '@svg/coin1.svg'
 import coin2 from '@svg/coin2.svg'
 
@@ -17,7 +17,16 @@ export default function () {
               <img src={coin1} alt="Золотой пай" />
               <img src={coin2} alt="Золотой пай" />
             </div>
-            <button class="btn btn__black text-light">Connect wallet</button>
+            <button
+              class="btn btn__black text-light"
+              onclick={() => {
+                Fn.initOne("modalSoon", {
+                  title: "В разработке"
+                })
+              }}
+            >
+              Connect wallet
+            </button>
           </div>
 
         </div>
@@ -41,10 +50,37 @@ export default function () {
 
           <div class="home-token-gim_btns">
             <div>
-              <button class="btn btn-outline__black">White Paper</button>
-              <button class="btn btn-outline__black">Токеномика</button>
+              <button
+                class="btn btn-outline__black"
+                onclick={() => {
+                  Fn.initOne("modalSoon", {
+                    title: "В разработке"
+                  })
+                }}
+              >
+                White Paper
+              </button>
+              <button
+                class="btn btn-outline__black"
+                onclick={() => {
+                  Fn.initOne("modalSoon", {
+                    title: "В разработке"
+                  })
+                }}
+              >
+                Токеномика
+              </button>
             </div>
-            <button class="btn btn-outline__black home-token-gim_btns-center">Смарт контракт</button>
+            <button
+              class="btn btn-outline__black home-token-gim_btns-center"
+              onclick={() => {
+                Fn.initOne("modalSoon", {
+                  title: "В разработке"
+                })
+              }}
+            >
+              Смарт контракт
+            </button>
           </div>
         </div>
       </section>

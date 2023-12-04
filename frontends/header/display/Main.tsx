@@ -1,4 +1,4 @@
-import { Cemjsx } from "cemjs-all"
+import { Cemjsx, Fn } from "cemjs-all"
 import menu from '@json/menu'
 
 export default function () {
@@ -15,8 +15,14 @@ export default function () {
                         {
                             menu.map(item => {
                                 return (
-                                    <li>
-                                        <a href={item.link} class="header-nav-list_item">
+                                    <li
+                                        onclick={() => {
+                                            Fn.initOne("modalSoon", {
+                                                title: "В разработке"
+                                            })
+                                        }}
+                                    >
+                                        <a class="header-nav-list_item">
                                             {item.name}
                                         </a>
                                     </li>
@@ -26,6 +32,11 @@ export default function () {
                     </ul>
                     <button
                         class="btn btn-outline__yellow"
+                        onclick={() => {
+                            Fn.initOne("modalSoon", {
+                                title: "В разработке"
+                            })
+                        }}
                     >
                         Регистрация
                     </button>

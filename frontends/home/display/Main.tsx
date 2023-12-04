@@ -19,10 +19,10 @@ export default function () {
       <Marketplace />
       <Exchange />
       <Token />
-      {/* <Profitably /> */}
-      {/* <Info /> */}
-      {/* <Gim /> */}
-      {/* <Faq /> */}
+      <Profitably />
+      <Info />
+      <Gim />
+      <Faq />
     </div>
   )
 }

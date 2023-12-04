@@ -50,6 +50,13 @@
 
   // ADVANTAGES
   &-advantages {
+    padding: var(--section-padding);
+
+    .section-title {
+      padding-bottom: clamp(2rem, 2vw, 5rem);
+      text-align: center;
+    }
+
     &-slider {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -150,7 +157,26 @@
         }
       }
 
-      @media(max-width: 600px) {
+    }
+
+    @media(max-width: 1200px) {
+      &-slider {
+        grid-template-columns: repeat(2, 1fr);
+
+        &_item {
+          &-mobile {
+            display: none;
+          }
+        }
+      }
+    }
+
+    @media(max-width: 600px) {
+      .section-title {
+        text-align: left;
+      }
+
+      &-slider {
         &_item {
           padding: 1rem;
 
@@ -164,8 +190,10 @@
           width: 3rem;
         }
       }
+    }
 
-      @media(max-width: 464px) {
+    @media(max-width: 464px) {
+      &-slider {
         &-arrow {
           height: 2.5rem;
           width: 2.5rem;
@@ -190,19 +218,6 @@
           }
         }
       }
-
-    }
-
-    @media(max-width: 1200px) {
-      &-slider {
-        grid-template-columns: repeat(2, 1fr);
-
-        &_item {
-          &-mobile {
-            display: none;
-          }
-        }
-      }
     }
   }
 
@@ -211,6 +226,10 @@
     border-radius: var(--border-r);
     background-color: var(--gray);
     padding: clamp(1rem, 3.5vw, 2.5rem) clamp(1rem, 3.5vw, 3.125rem);
+
+    &-inner {
+      padding-top: clamp(1rem, 2vw, 2rem);
+    }
 
     &-info {
       display: flex;
@@ -238,6 +257,8 @@
 
   // MARKETPLACE
   &-marketplace {
+    padding: var(--section-padding);
+
     &-image {
       position: relative;
       z-index: 1;
@@ -253,6 +274,10 @@
         border-radius: var(--border-r);
         z-index: -1;
       }
+    }
+
+    @media (max-width: 1200px) {
+      margin: 0 1.5rem;
     }
 
     @media(max-width: 850px) {
@@ -283,6 +308,11 @@
   &-exchange {
     background-color: var(--black);
     position: relative;
+
+    &-section-title {
+      text-align: center;
+      margin-bottom: clamp(2rem, 2vw, 5rem);
+    }
 
     &::before {
       content: '';
@@ -422,6 +452,10 @@
     }
 
     @media(max-width: 600px) {
+      &-section-title {
+        text-align: left;
+      }
+
       &::before {
         content: '';
         position: absolute;
@@ -456,19 +490,6 @@
             .home-exchange-info {
               margin-left: 0;
             }
-
-            // &::before {
-            //   content: '';
-            //   background-image: url('svg/arrowBlack.svg');
-            //   top: 0;
-            //   position: absolute;
-            //   left: 0;
-            //   background-repeat: no-repeat;
-            //   height: 100%;
-            //   width: 48%;
-            //   background-size: contain;
-            //   transform: rotate(90deg);
-            // }
           }
         }
       }
@@ -547,16 +568,12 @@
         padding: 2rem 2rem 0 2rem;
         row-gap: 1.5rem;
 
-        // column-gap: 5rem;
-
         &>div {
           display: flex;
           align-items: center;
           justify-content: space-between;
           width: 100%;
         }
-
-
       }
     }
 
@@ -602,6 +619,8 @@
     }
 
     @media(max-width: 550px) {
+      gap: 3rem;
+
       &-coins {
         img {
           &:first-child {
@@ -616,6 +635,10 @@
         }
       }
 
+      &-wrapBtn {
+        justify-content: space-between;
+      }
+
       &-gim {
         &_line {
           grid-template-columns: 40% 60%;
@@ -628,12 +651,16 @@
         }
       }
     }
-
-
   }
 
   // PROFITABLY
   &-profitably {
+    padding: var(--section-padding);
+
+    .section-title {
+      text-align: center;
+    }
+
     &-content {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -642,17 +669,33 @@
       &_item {
         border-radius: var(--border-r);
         background: var(--gray);
-        padding: 2rem;
+        padding: clamp(1.5rem, 3vw, 2rem);
       }
 
       &_title {
-        font-size: 2rem;
+        font-size: clamp(1.5rem, 2vw, 2rem);
         line-height: var(--lh);
       }
 
       &_desc {
-        font-size: 1.25rem;
         line-height: var(--lh);
+        padding-top: clamp(1rem, 2vw, 1.5rem);
+      }
+    }
+
+    @media(max-width: 500px) {
+      .section-title {
+        text-align: left;
+      }
+
+      &-content {
+        &_item {
+          &-header {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+          }
+        }
       }
     }
   }
@@ -662,19 +705,52 @@
     border-radius: var(--border-r);
     background-color: var(--yellow-dark);
     max-width: 90%;
-    margin: 0 auto;
-    padding: 1.5rem 3rem;
+    margin: clamp(1rem, 2vw, 5rem) auto;
+    padding: 1.5rem clamp(1rem, 2.5vw, 3rem);
+    display: grid;
+    grid-template-columns: 60% 35%;
+    gap: 3rem;
 
     &_desc {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       line-height: 120%;
+
+      p {
+        padding-bottom: clamp(1rem, 2.5vw, 3rem);
+      }
+    }
+
+    @media(max-width: 992px) {
+      max-width: 100%;
+      gap: 1.5rem;
+      grid-template-columns: 70% 25%;
+    }
+
+    @media(max-width: 650px) {
+      grid-template-columns: 1fr;
+
+      &_image {
+        order: 1;
+      }
+
+      &_desc {
+        order: 2;
+      }
+
+
     }
   }
 
   // GIM
   &-gim {
+    padding: var(--section-padding);
+
+    .section-title {
+      text-align: center;
+    }
+
     &-content {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(530px, 1fr));
@@ -687,11 +763,56 @@
         flex-direction: column;
         justify-content: space-between;
         gap: 1rem;
-        padding: 2.8rem 1.8rem;
+        padding: clamp(1rem, 2vw, 2.8rem) clamp(1rem, 2vw, 1.8rem);
+      }
+
+      &_title {
+        font-size: clamp(1.5rem, 2vw, 2rem);
+        line-height: var(--lh);
+        margin-bottom: clamp(1rem, 2vw, 2rem);
       }
 
       &_image {
         align-self: end;
+      }
+    }
+
+    @media(max-width: 600px) {
+      .section-title {
+        text-align: left;
+      }
+
+      &-content {
+        grid-template-columns: 1fr;
+
+        &_image {
+          display: flex;
+          justify-content: end;
+          align-items: end;
+
+          img {
+            width: 50%;
+          }
+        }
+      }
+
+
+    }
+  }
+
+  // FAQ
+  &-faq {
+
+    .section-title {
+      text-align: center;
+    }
+
+    padding: var(--section-padding);
+    padding-top: 0;
+
+    @media(max-width: 600px) {
+      .section-title {
+        text-align: left;
       }
     }
   }

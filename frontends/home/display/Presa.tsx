@@ -1,4 +1,4 @@
-import { Cemjsx, Static } from "cemjs-all"
+import { Cemjsx, Static, Fn } from "cemjs-all"
 
 export default function () {
   return (
@@ -13,7 +13,14 @@ export default function () {
             <p>Золото, благодаря своей уникальной прочности, блестящему внешнему виду и редкости, всегда было ценным и востребованным материалом. Оно давало людям уверенность В сохранении и приумножении их богатства.</p>
           </div>
 
-          <button class="btn btn__yellow">Купить GIM</button>
+          <button
+            class="btn btn__yellow"
+            onclick={() => {
+              Fn.initOne("modalSoon", {
+                title: "В разработке"
+              })
+            }}
+          >Купить GIM</button>
         </div>
       </div>
     </section>

@@ -19,6 +19,7 @@
   --lh: 120%;
   --border-r: 1.25rem;
   --text-default: clamp(1rem, 2vw, 1.125rem);
+  --section-padding: clamp(3rem, 2vw, 5rem) 0;
 
   // transition
   --tran-03: all .3s ease-in-out;

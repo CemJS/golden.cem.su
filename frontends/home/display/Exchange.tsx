@@ -5,7 +5,9 @@ import arrowBlack from '@svg/arrowBlack.svg'
 export default function () {
   return (
     <div>
-      <h2 class="section-title text-align-center mb-3">Обмен токена на физическое золото</h2>
+      <div class="wrapper">
+        <h2 class="section-title home-exchange-section-title">Обмен токена на физическое золото</h2>
+      </div>
       <section class="home-exchange">
         <div class="wrapper">
           <div class="home-exchange-content">

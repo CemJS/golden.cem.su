@@ -1,11 +1,13 @@
-import { Cemjsx, Static } from "cemjs-all"
+import { Cemjsx, Static, Fn } from "cemjs-all"
 import advantages from '@json/advantages'
 
 
 export default function () {
   return (
-    <section class="home-advantages pb-5">
-      <h2 class="section-title text-align-center font-medium py-3">Почему выгодно приобретать GIM</h2>
+    <section class="home-advantages">
+      <div class="wrapper">
+        <h2 class="section-title font-medium">Почему выгодно приобретать GIM</h2>
+      </div>
 
       <div class="home-advantages-slider-wrap">
         <div class="wrapper">
@@ -23,10 +25,23 @@ export default function () {
                 )
               })
             }
-            <div class="home-advantages-slider-arrow home-advantages-slider-arrow__left">
+            <div class="home-advantages-slider-arrow home-advantages-slider-arrow__left"
+
+              onclick={() => {
+                Fn.initOne("modalSoon", {
+                  title: "В разработке"
+                })
+              }}
+            >
               <span></span>
             </div>
-            <div class="home-advantages-slider-arrow home-advantages-slider-arrow__right">
+            <div class="home-advantages-slider-arrow home-advantages-slider-arrow__right"
+              onclick={() => {
+                Fn.initOne("modalSoon", {
+                  title: "В разработке"
+                })
+              }}
+            >
               <span></span>
             </div>
           </div>
