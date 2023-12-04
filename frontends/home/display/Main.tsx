@@ -14,7 +14,7 @@ export default function () {
   return (
     <div>
       <Presa />
-      {/* <Advantages /> */}
+      <Advantages />
       <About />
       <Marketplace />
       <Exchange />

@@ -13,7 +13,10 @@ export default function () {
             {
               advantages.map((item) => {
                 return (
-                  <div class="home-advantages-slider_item">
+                  <div
+                    class={[
+                      "home-advantages-slider_item",
+                      item.hidden ? "home-advantages-slider_item-mobile" : null]}>
                     <img class="home-advantages-slider_item-image" src={item.icon} alt={item.text} />
                     <p class="home-advantages-slider_item-text">{item.text}</p>
                   </div>

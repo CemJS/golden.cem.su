@@ -13,14 +13,16 @@
   },
   {
     "icon": "/contents/advantages/secure.svg",
-    "text": "Удобство и простота в управлении активами"
+    "text": "Удобство в управлении"
   },
   {
     "icon": "/contents/advantages/chartBar.svg",
-    "text": "Прозрачность"
+    "text": "Прозрачность",
+    "hidden": true
   },
   {
     "icon": "/contents/advantages/discs.svg",
-    "text": "Токенизация золота"
+    "text": "Токенизация золота",
+    "hidden": true
   }
 ]
