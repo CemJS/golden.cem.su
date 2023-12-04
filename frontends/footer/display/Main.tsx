@@ -100,8 +100,20 @@ export default function () {
                             </div>
                         </div>
                         <div class="footer-btns">
-                            <button class="btn btn-outline__yellow">Регистрация</button>
-                            <button class="btn btn-outline__yellow">Остались Вопросы ?</button>
+                            <button class="btn btn-outline__yellow"
+                                onclick={() => {
+                                    Fn.initOne("modalSoon", {
+                                        title: "В разработке"
+                                    })
+                                }}
+                            >Регистрация</button>
+                            <button class="btn btn-outline__yellow"
+
+                                onclick={() => {
+                                    Fn.initOne("modalSoon", {
+                                        title: "В разработке"
+                                    })
+                                }}>Остались Вопросы ?</button>
                         </div>
                     </div>
                 </div>
@@ -109,10 +121,22 @@ export default function () {
                 <div class="footer-down">
                     <ul class="footer-list mt-1">
                         <li>
-                            <a href="#" class="footer-list_item">Договор оферты</a>
+                            <a class="footer-list_item"
+                                onclick={() => {
+                                    Fn.initOne("modalSoon", {
+                                        title: "В разработке"
+                                    })
+                                }}
+                            >Договор оферты</a>
                         </li>
                         <li>
-                            <a href="#" class="footer-list_item">Политика конфидициальности</a>
+                            <a class="footer-list_item"
+                                onclick={() => {
+                                    Fn.initOne("modalSoon", {
+                                        title: "В разработке"
+                                    })
+                                }}
+                            >Политика конфидициальности</a>
                         </li>
                     </ul>
                 </div>

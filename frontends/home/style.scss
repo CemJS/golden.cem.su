@@ -683,17 +683,32 @@
       }
     }
 
-    @media(max-width: 500px) {
+    @media (max-width: 500px) {
       .section-title {
         text-align: left;
       }
 
       &-content {
+        grid-template-columns: 1fr;
+
         &_item {
           &-header {
             display: flex;
             align-items: center;
             gap: 1.5rem;
+          }
+        }
+      }
+    }
+
+    @media (max-width: 400px) {
+      padding-top: 0;
+
+      &-content {
+
+        &_item {
+          &-header {
+            flex-direction: column;
           }
         }
       }
@@ -802,7 +817,6 @@
 
   // FAQ
   &-faq {
-
     .section-title {
       text-align: center;
     }
