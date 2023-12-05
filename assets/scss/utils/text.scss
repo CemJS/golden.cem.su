@@ -17,12 +17,17 @@
     }
   }
 
+  // цвет текста
   &-light {
     color: var(--light-text);
   }
 
   &-yellow {
     color: var(--yellow-1);
+  }
+
+  &-black {
+    color: var(--black);
   }
 }
 
@@ -41,4 +46,13 @@
     font-weight: 400;
     font-family: 'Roboto-Regular';
   }
+}
+
+// width
+.w-100 {
+  width: 100%;
+}
+
+.w-50 {
+  width: 50%;
 }

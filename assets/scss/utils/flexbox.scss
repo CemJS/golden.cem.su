@@ -13,14 +13,22 @@
   flex-direction: column;
 }
 
-.justify-content-between {
-  justify-content: space-between;
+.justify-content {
+  &-between {
+    justify-content: space-between;
+  }
+
+  &-end {
+    justify-content: end;
+  }
+
+  &-start {
+    justify-content: start;
+  }
 }
 
-.justify-content-end {
-  justify-content: end;
-}
-
-.justify-content-start {
-  justify-content: start;
+.align-items {
+  &-center {
+    align-items: center;
+  }
 }

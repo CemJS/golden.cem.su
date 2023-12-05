@@ -11,7 +11,6 @@
     border: 1px solid var(--black);
     color: var(--light-text);
 
-
     &::before {
       content: '';
       position: absolute;
@@ -43,6 +42,10 @@
 
       &::before {
         background: rgba(59, 57, 57, 0.8);
+      }
+
+      .btn {
+        margin: 0 auto;
       }
     }
 
@@ -194,9 +197,22 @@
 
     @media(max-width: 464px) {
       &-slider {
+        gap: 0.8rem;
+
+        &-wrap {
+          &::before {
+            border-radius: 0;
+            height: 5rem;
+          }
+        }
+
+        &_item {
+          padding: 0.5rem;
+        }
+
         &-arrow {
-          height: 2.5rem;
-          width: 2.5rem;
+          height: 2rem;
+          width: 2rem;
 
           span {
             width: 0.6rem;
@@ -259,6 +275,13 @@
   &-marketplace {
     padding: var(--section-padding);
 
+    &-inner {
+      display: grid;
+      grid-template-columns: 60% 35%;
+      gap: 3rem;
+      padding-top: 2rem;
+    }
+
     &-image {
       position: relative;
       z-index: 1;
@@ -281,14 +304,34 @@
     }
 
     @media(max-width: 850px) {
+      .section-title {
+        &::after {
+          content: 'Создай свой портфель';
+          display: block;
+          font-size: 1.4rem;
+          padding-top: 0.5rem;
+        }
+      }
+
+      &-inner {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding-top: 1rem;
+      }
+
       .home-about-info {
         order: 2;
+
+        p:first-child {
+          display: none;
+        }
       }
 
       &-image {
         order: 1;
         margin: 0 auto;
         padding: 0 clamp(2rem, 3.5vw, 4rem);
+
 
       }
     }
@@ -472,20 +515,19 @@
 
       &-content {
         flex-direction: column;
-        gap: 1rem;
         padding: 2rem 0;
 
         &_item {
           width: 100%;
 
           &-l {
-            padding-bottom: 2rem;
+            padding-bottom: 9rem;
           }
 
           &-r {
             flex-direction: column-reverse;
             position: relative;
-            padding-top: 1rem;
+            padding-top: 9rem;
 
             .home-exchange-info {
               margin-left: 0;
@@ -506,9 +548,30 @@
         }
 
         &__black {
+          position: absolute;
+          top: 1.5rem;
+          right: 0;
+          width: 100%;
 
           &::before {
-            display: none;
+            transform: rotate(90deg);
+            height: 6rem;
+            width: 9.3rem;
+            left: -1rem;
+            top: -2rem;
+          }
+
+          &::after {
+            content: '';
+            background-image: url('svg/arrowYellow.svg');
+            top: -8rem;
+            position: absolute;
+            right: 0;
+            background-repeat: no-repeat;
+            height: 6rem;
+            width: 9.3rem;
+            background-size: contain;
+            transform: rotate(90deg);
           }
         }
       }
@@ -590,7 +653,7 @@
     }
 
     @media(max-width: 767px) {
-      gap: 1rem;
+      gap: 1.5rem;
       grid-template-columns: 1fr;
 
       .section-title {
@@ -619,8 +682,6 @@
     }
 
     @media(max-width: 550px) {
-      gap: 3rem;
-
       &-coins {
         img {
           &:first-child {
@@ -637,11 +698,21 @@
 
       &-wrapBtn {
         justify-content: space-between;
+        align-items: center;
+        padding-top: 1rem;
+      }
+
+      &-coins {
+        align-items: center;
       }
 
       &-gim {
         &_line {
           grid-template-columns: 40% 60%;
+        }
+
+        &_value {
+          text-align: right;
         }
 
         &_btns {
@@ -705,11 +776,20 @@
       padding-top: 0;
 
       &-content {
-
         &_item {
           &-header {
-            flex-direction: column;
+            gap: 0;
           }
+        }
+
+        &_image {
+          img {
+            width: 7.2rem;
+          }
+        }
+
+        &_desc {
+          padding-top: 0;
         }
       }
     }
@@ -753,8 +833,14 @@
       &_desc {
         order: 2;
       }
+    }
 
-
+    @media(max-width: 464px) {
+      &_image {
+        img {
+          width: 6.8rem;
+        }
+      }
     }
   }
 

@@ -20,7 +20,7 @@ export default function () {
                 title: "В разработке"
               })
             }}
-          >Купить GIM</button>
+          >КУПИТЬ GIM</button>
         </div>
       </div>
     </section>

@@ -4,8 +4,8 @@ import mobile from '@images/mobile.png'
 export default function () {
   return (
     <section class="home-marketplace pb-5 wrapper">
-      <h2 class="section-title text-align-left">Маркетплэйс</h2>
-      <div class="col-65-35 pt-2">
+      <h2 class="section-title text-align-left font-bold">Маркетплэйс</h2>
+      <div class="home-marketplace-inner">
         <div class="home-about-info">
           <div>
             <p class="font-medium text">Создай свой портфель</p>

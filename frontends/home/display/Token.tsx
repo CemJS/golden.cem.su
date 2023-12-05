@@ -18,7 +18,7 @@ export default function () {
               <img src={coin2} alt="Золотой пай" />
             </div>
             <button
-              class="btn btn__black text-light"
+              class="btn btn__black"
               onclick={() => {
                 Fn.initOne("modalSoon", {
                   title: "В разработке"

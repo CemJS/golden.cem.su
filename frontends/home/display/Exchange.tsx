@@ -1,6 +1,4 @@
 import { Cemjsx, Static } from "cemjs-all"
-import arrowYellow from '@svg/arrowYellow.svg'
-import arrowBlack from '@svg/arrowBlack.svg'
 
 export default function () {
   return (

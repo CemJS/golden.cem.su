@@ -1,8 +1,3 @@
-:root {
-  --hue: 223;
-  --bg_preloader: hsl(var(--hue), 90%, 50%);
-}
-
 .preloader {
   position: absolute;
   top: 50%;
@@ -21,63 +16,65 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: var(--black);
+    background: var(--back);
   }
 
-  &__rect {
-    animation: preloaderAnimate 1.5s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+  .load {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
   }
 
-  &__rect {
-    animation-name: preloaderRotate;
+  .load span {
+    border: 0;
+    margin: 0;
+    width: 40%;
+    height: 40%;
+    position: absolute;
+    border-radius: 50%;
+    animation: spin 2s ease infinite
   }
 
-  &__rect-g {
-    transform-origin: 64px 64px;
-  }
-}
-
-/* Animations */
-@keyframes preloaderAnimate {
-  from {
-    transform: rotate(0);
+  .load :first-child {
+    background: #DCB300;
+    animation-delay: -1.5s
   }
 
-  80%,
-  to {
-    animation-timing-function: steps(1, start);
-    transform: rotate(90deg);
-  }
-}
-
-@keyframes preloaderRotate {
-  from {
-    transform: translate(64px, 0);
-    width: 64px;
-    height: 64px;
+  .load :nth-child(2) {
+    background: #DAD6D6;
+    animation-delay: -1s
   }
 
-  25% {
-    transform: translate(0, 0);
-    width: 128px;
-    height: 32px;
+  .load :nth-child(3) {
+    background: #FFC400;
+    animation-delay: -0.5s
   }
 
-  50% {
-    transform: translate(0, 0);
-    width: 64px;
-    height: 64px;
+  .load :last-child {
+    background: #313231;
   }
 
-  75% {
-    transform: translate(0, 0);
-    width: 32px;
-    height: 128px;
+  @keyframes spin {
+
+    0%,
+    100% {
+      transform: translate(0)
+    }
+
+    25% {
+      transform: translate(160%)
+    }
+
+    50% {
+      transform: translate(160%, 160%)
+    }
+
+    75% {
+      transform: translate(0, 160%)
+    }
   }
 
-  to {
-    transform: translate(0, 64px);
-    width: 64px;
-    height: 64px;
-  }
 }

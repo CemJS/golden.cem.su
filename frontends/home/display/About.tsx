@@ -4,7 +4,7 @@ import chart from '@svg/grafik.svg'
 export default function () {
   return (
     <section class="home-about pb-5 wrapper">
-      <h2 class="section-title text-align-left">Золотой пай</h2>
+      <h2 class="section-title text-align-left font-bold">Золотой пай</h2>
       <div class="col-65-35 home-about-inner">
         <div class="home-about-info">
           <div>
