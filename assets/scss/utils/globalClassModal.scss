@@ -54,6 +54,10 @@
     &-soon {
       max-width: 25rem;
     }
+
+    &-auth {
+      max-width: 40rem;
+    }
   }
 
   &_header {
@@ -81,5 +85,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  .field {
+    &-input {
+      background-color: var(--gray);
+      font-size: 1rem;
+    }
   }
 }

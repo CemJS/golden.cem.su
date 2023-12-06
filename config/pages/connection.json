@@ -1,0 +1,8 @@
+{
+    "url": "/connection",
+    "front": [
+        "header",
+        "connection",
+        "footer"
+    ]
+}

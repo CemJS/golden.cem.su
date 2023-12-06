@@ -1,0 +1,47 @@
+.contact {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5rem;
+
+  &-form {
+    padding: clamp(1.2rem, 2vw, 1.8rem) clamp(1rem, 2vw, 2.2rem);
+    background-color: var(--yellow-1);
+    border-radius: var(--border-r);
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+
+    &-row {
+      display: grid;
+      grid-template-columns: 50% 50%;
+      gap: 1rem;
+    }
+
+    .btn {
+      width: 100%;
+    }
+  }
+
+  &-address {
+    max-width: 41%;
+    padding: clamp(1.5rem, 2vw, 4.5rem) 0;
+  }
+
+  @media(max-width: 1200px) {
+    gap: 1rem;
+
+    &-form {
+      &-row {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+
+  @media(max-width: 767px) {
+    grid-template-columns: 1fr;
+
+    &-address {
+      max-width: 100%;
+    }
+  }
+}

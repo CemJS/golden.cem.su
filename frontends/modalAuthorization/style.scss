@@ -1,0 +1,31 @@
+.modal {
+  &_main {
+    &-auth {
+      margin: 0 auto;
+      max-width: 19rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+
+      .btn {
+        width: 100%;
+      }
+    }
+  }
+
+  &-auth {
+    &_image {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &_wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      transition: var(--tran-03);
+      height: 10.5rem;
+    }
+  }
+}

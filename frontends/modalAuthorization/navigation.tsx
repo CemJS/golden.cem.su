@@ -11,7 +11,7 @@ export default function () {
         }
       }}>
       <div class="modal_body" ref="modalBody">
-        <div class="modal_content modal_content-soon">
+        <div class="modal_content modal_content-auth">
           <Header />
           <Main />
         </div>

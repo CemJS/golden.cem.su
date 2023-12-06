@@ -102,11 +102,9 @@ export default function () {
                         <div class="footer-btns">
                             <button class="btn btn-outline__yellow"
                                 onclick={() => {
-                                    Fn.initOne("modalSoon", {
-                                        title: "В разработке"
-                                    })
+                                    Fn.initOne("modalAuthorization", {})
                                 }}
-                            >Регистрация</button>
+                            >Регистрация / Вход</button>
                             <button class="btn btn-outline__yellow"
 
                                 onclick={() => {

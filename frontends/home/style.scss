@@ -744,7 +744,7 @@
       }
 
       &_title {
-        font-size: clamp(1.5rem, 2vw, 2rem);
+        font-size: var(--section-subtitle);
         line-height: var(--lh);
       }
 
@@ -784,7 +784,7 @@
 
         &_image {
           img {
-            width: 7.2rem;
+            width: 7rem;
           }
         }
 
@@ -868,7 +868,7 @@
       }
 
       &_title {
-        font-size: clamp(1.5rem, 2vw, 2rem);
+        font-size: var(--section-subtitle);
         line-height: var(--lh);
         margin-bottom: clamp(1rem, 2vw, 2rem);
       }

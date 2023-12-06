@@ -5,7 +5,45 @@ import menu from '@json/menu'
 const RenderMenu = function ({ items }) {
     return (
         <ul class="header-nav-list text-light">
-            {
+            <li
+                onclick={() => {
+                    Fn.initOne("modalSoon", {
+                        title: "В разработке"
+                    })
+                }}
+            >
+                <a class="header-nav-list_item">
+                    О нас
+                </a>
+            </li>
+            <li
+                onclick={() => {
+                    Fn.initOne("modalSoon", {
+                        title: "В разработке"
+                    })
+                }}
+            >
+                <a class="header-nav-list_item">
+                    Контакты
+                </a>
+            </li>
+            <li
+                onclick={() => {
+                    Fn.initOne("modalSoon", {
+                        title: "В разработке"
+                    })
+                }}
+            >
+                <a class="header-nav-list_item">
+                    Маркетплэйс
+                </a>
+            </li>
+            <li>
+                <a href={items.link} class="header-nav-list_item" onclick={Fn.link}>
+                    Связаться
+                </a>
+            </li>
+            {/* {
                 items.map(item => {
                     return (
                         <li
@@ -15,13 +53,13 @@ const RenderMenu = function ({ items }) {
                                 })
                             }}
                         >
-                            <a class="header-nav-list_item">
+                            <a href={item.link} class="header-nav-list_item">
                                 {item.name}
                             </a>
                         </li>
                     )
                 })
-            }
+            } */}
         </ul>
     )
 }
@@ -91,12 +129,10 @@ export default function () {
                         <button
                             class="btn btn-outline__yellow font-regular"
                             onclick={() => {
-                                Fn.initOne("modalSoon", {
-                                    title: "В разработке"
-                                })
+                                Fn.initOne("modalAuthorization", {})
                             }}
                         >
-                            Регистрация
+                            Регистрация / Вход
                         </button>
                         <div
                             ref="burger"
