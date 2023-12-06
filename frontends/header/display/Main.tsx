@@ -84,33 +84,87 @@ const RenderMobileMenu = function ({ items }) {
                 </button>
             </div>
             <ul class="header-mobile-list">
-                {
+                <li
+                    onclick={() => {
+                        front.Variable.openSidebar = false;
+                        Fn.initAll()
+                    }}
+                >
+                    <a
+                        class="header-mobile-list_item"
+                    >
+                        О нас
+                    </a>
+                </li>
+                <li
+                    onclick={() => {
+                        front.Variable.openSidebar = false;
+                        Fn.initAll()
+                    }}
+                >
+                    <a
+                        class="header-mobile-list_item"
+                    >
+                        Контакты
+                    </a>
+                </li>
+                <li
+                    onclick={() => {
+                        front.Variable.openSidebar = false;
+                        Fn.initAll()
+                    }}
+                >
+                    <a
+                        class="header-mobile-list_item"
+                    >
+                        Маркетплэйс
+                    </a>
+                </li>
+                <li
+                    onclick={() => {
+                        front.Variable.openSidebar = false;
+                        Fn.initAll()
+                    }}
+                >
+                    <a
+                        href="/connection"
+                        class="header-mobile-list_item"
+                        onclick={Fn.link}
+                    >
+                        Связаться
+                    </a>
+                </li>
+                {/* {
                     items.map((item) => {
                         return (
-                            <li>
+                            <li
+                                onclick={() => {
+                                    front.Variable.openSidebar = false;
+                                    Fn.init()
+                                }}
+                            >
                                 <a
                                     href={item.link}
                                     class="header-mobile-list_item"
-                                    onclick={(e) => {
-                                        e.preventDefault()
-                                        window.scrollTo({
-                                            top: document.querySelector(item.link).offsetTop - 85,
-                                            behavior: "smooth"
-                                        })
-                                        front.Variable.openSidebar = false;
-                                        Fn.init()
-                                    }}
+                                    onclick={Fn.link}
                                 >
                                     {item.name}
                                 </a>
                             </li>
                         )
                     })
-                }
+                } */}
             </ul>
-            <a href="/" class="logo text-black">
-                Золотой Пай
-            </a>
+            <div
+                onclick={() => {
+                    front.Variable.openSidebar = false;
+                    Fn.initAll()
+                }}
+            >
+                <a href="/" class="logo text-black" onclick={Fn.link}>
+                    Золотой Пай
+                </a>
+            </div>
         </div>
     )
 }
@@ -120,7 +174,7 @@ export default function () {
         <div class="wrapper">
             <div class="header-inner">
                 <div class="header-logo">
-                    <a href="/" class="logo">
+                    <a href="/" class="logo" onclick={Fn.link}>
                         Золотой Пай
                     </a>
                 </div>
