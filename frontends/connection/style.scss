@@ -1,4 +1,4 @@
-.contact {
+.connection {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 5rem;
@@ -13,7 +13,7 @@
 
     &-row {
       display: grid;
-      grid-template-columns: 50% 50%;
+      grid-template-columns: repeat(2, 1fr);
       gap: 1rem;
     }
 

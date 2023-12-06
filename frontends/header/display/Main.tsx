@@ -1,5 +1,6 @@
 import { Cemjsx, Fn, front } from "cemjs-all"
 import cancel from '@svg/icons/cancel.svg'
+import person from '@svg/icons/yellow/personYellow.svg'
 import menu from '@json/menu'
 
 const RenderMenu = function ({ items }) {
@@ -39,7 +40,7 @@ const RenderMenu = function ({ items }) {
                 </a>
             </li>
             <li>
-                <a href={items.link} class="header-nav-list_item" onclick={Fn.link}>
+                <a href="/connection" class="header-nav-list_item" onclick={Fn.link}>
                     Связаться
                 </a>
             </li>
@@ -132,7 +133,8 @@ export default function () {
                                 Fn.initOne("modalAuthorization", {})
                             }}
                         >
-                            Регистрация / Вход
+                            <span>Регистрация / Вход</span>
+                            <img src={person} alt="Регистрация / Вход" />
                         </button>
                         <div
                             ref="burger"

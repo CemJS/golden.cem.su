@@ -279,6 +279,7 @@
   font-family: 'Roboto-Regular';
 
   &_item {
+    cursor: pointer;
 
     &:not(:last-child) {
       &::after {
@@ -289,6 +290,7 @@
 
     &-current {
       color: #888;
+      cursor: default;
     }
   }
 
